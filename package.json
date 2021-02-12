@@ -1,0 +1,30 @@
+{
+  "name": "sb-telemetry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha",
+    "test-telemetry": "mocha test/helpers/spec/telemetryHelper.spec.js --reporter mochawesome"
+  },
+  "author": "saket",
+  "license": "ISC",
+  "dependencies": {
+    "@project-sunbird/telemetry-sdk": "0.0.27",
+    "chai": "^4.3.0",
+    "chai-spies": "^1.0.0",
+    "dateformat": "^4.5.1",
+    "i": "^0.3.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mocha": "^8.3.0",
+    "mochawesome": "^6.2.1",
+    "mock-require": "^3.0.3",
+    "node-mocks-http": "^1.10.1",
+    "npm": "^7.5.3",
+    "request": "^2.88.2",
+    "sb_telemetry_util": "file:libs/sb_telemetry_util",
+    "ua-parser-js": "^0.7.23",
+    "uuid": "^8.3.2"
+  }
+}
