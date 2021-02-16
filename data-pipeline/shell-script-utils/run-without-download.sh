@@ -1,0 +1,1 @@
+bin/spark-shell --jars /home/spark/lib_jars/analytics-job-driver-1.0.jar,/home/spark/lib_jars/hadoop-aws-2.7.3.jar,/home/spark/lib_jars/cloud-store-sdk-1.0.jar,/home/spark/lib_jars/guava-19.0.jar,/home/spark/lib_jars/aws-java-sdk-1.7.4.jar,/home/spark/lib_jars/tika-core-1.18.jar --driver-memory 4G --executor-memory 3G --executor-cores 4

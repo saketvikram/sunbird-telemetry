@@ -1,0 +1,16 @@
+Setup:
+- download analytics-framework-1.0.jar file from sunbird staging deploy job workspace (https://ci.ntp.net.in/jenkins/job/datapipeline-staging/job/LPA_Deploy_Data_Products_Staging/ws/)
+- download sunbird-cloud-store-sdk-1.0.jar jar from same jenkins job workspace
+- place sunbird-cloud-store-sdk-1.0.jar in spark jar
+-  set aws-s3 production key and secret in your environment
+- set azure-blob production account name and secret in your environment
+- do some jars replacement
+    - Remove jets3t 0.9.3 from Spark jars folder
+    - Download jets3t 0.9.4 and copy to Spark jars folder
+    - Download hadoop-aws 2.7.3 and copy to Spark jars folder
+    - Remove java-xmlbuilder 1.0 from Spark jars folder
+    - Download java-xmlbuilder 1.1 in to Spark jars folder
+    - Remove Guava 14.0.1 from Spark jars folder
+    - Download Guava 19.0 and copy to Spark jars folder
+- Set PATH for Spark
+

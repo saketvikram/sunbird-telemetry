@@ -1,0 +1,8 @@
+val tel = spark.read.json("wasbs://telemetry-data-store@ntpproductionall.blob.core.windows.net/unique/2018-09-23*")
+val mobdata = tel.filter(col("context.pdata.id") === "prod.diksha.app")
+val startevent = mobdata.filter(col("eid") === "START" && col("actor.type") === "User" && col("context.env") === "home")
+startevent.select(countDistinct("context.did")).show()
+val qrscan = mobdata.filter(col("eid") === "INTERACT" && col("edata.subtype") === "qr-code-scan-success")
+println("total number of qr code scans is: "+ qrscan.count)
+val download = mobdata.filter(col("eid") === "INTERACT" && col("edata.subtype") === "ContentDownload-Success")
+println("Total number of downloads is: " + download.count)

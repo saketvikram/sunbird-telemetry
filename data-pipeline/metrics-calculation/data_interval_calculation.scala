@@ -1,0 +1,10 @@
+val sqlContext= new org.apache.spark.sql.SQLContext(sc)
+import sqlContext.implicits._
+case class events(delay: Int, count: Int)
+val datardd = sc.textFile("/Users/saket/Desktop/data28.txt").map(_.split(","))
+val classrdd = datardd.map(x=> events(x(0).trim.toInt, x(1).trim.toInt))
+val dataDF = classrdd.toDF()
+val sum814 = dataDF.filter(col("delay") >= 8 && col("delay") <= 14).agg(sum(col("count"))).show()
+val sum1521 = dataDF.filter(col("delay") >= 15 && col("delay") <= 21).agg(sum(col("count"))).show()
+val sum2228 = dataDF.filter(col("delay") >= 22 && col("delay") <= 28).agg(sum(col("count"))).show()
+val sum2955 = dataDF.filter(col("delay") >= 29 && col("delay") <= 55).agg(sum(col("count"))).show()
