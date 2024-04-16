@@ -10,7 +10,7 @@
   "author": "saket",
   "license": "ISC",
   "dependencies": {
-    "@project-sunbird/telemetry-sdk": "0.0.27",
+    "@project-sunbird/telemetry-sdk": "0.1.0",
     "chai": "^4.3.0",
     "chai-spies": "^1.0.0",
     "dateformat": "^4.5.1",
